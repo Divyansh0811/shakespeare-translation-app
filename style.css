@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Contrail+One&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Headland+One&display=swap');
+  
+  html {
+    height: 100%;
+    width:100% ;
+  }
+  body {
+
+    background-image: linear-gradient(225deg, #ffa63b 0, #fd932f 25%, #f37b1f 50%, #e86211 75%, #e04b0b 100%);
+  }
+  
+  .container{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    row-gap: 1rem;
+    margin: 1rem;
+    justify-content: center;
+    align-items: center;
+  
+  
+  }
+
+
+  .translate,.output-div{
+    display: flex;
+    justify-content: center;
+    grid-column-end: span 3;
+    
+  
+  }
+  
+  h1 {
+    margin: min(5rem,3rem);
+     text-align : center;
+     text-transform: uppercase;
+     font-family: 'Contrail One', cursive;
+     font-size: 30px;
+     
+  }
+
+  
+  
+  #input-textarea,#output-textarea{
+    text-align : left;
+    font-family: 'Contrail One', cursive;
+    padding: 0.5rem;
+  font-size: 16px;
+  max-height: 140px;
+    width: min(500px,100%);
+  }
+
+/* 
+  #output-textarea{
+    position: relative;
+    right: 95px;
+  } */
+
+
+  
+  
+
+#btn-translate  {
+        display: inline-block;
+        
+        background-color: #f4511e;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 25px;
+        padding: 1rem;
+        transition: all 0.5s;
+        cursor: pointer;
+       
+}
+      
+#btn-translate  span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+      
+#btn-translate  span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+}
+      
+#btn-translate:hover span {
+        padding-right: 30px;
+}
+      
+
+
+#btn-translate:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+  
+@media screen and (min-width: 600px){
+
+  .container{
+    top: 30vh;
+  }
+
+  #input-textarea,#output-textarea{
+    max-height:200px ;
+  }
+    
+  }
